@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    color:white;
+}
+
+.attribution a {
+    color: black;
+    text-decoration: none;
+}
+
+body, body::after {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-repeat: no-repeat;
+}
+
+body {
+    color: var(--dark-grayish-blue);
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark-cyan);
+    background-image: url('../images/bg-pattern-top.svg');
+    background-position: -285px -510px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:25px;
+}
+
+body::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../images/bg-pattern-bottom.svg');
+    background-position: 691px 376px;
+}
+
+.card {
+    width: 350px;
+    height: 375px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    background-image: url('../images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 87px;
+    box-shadow: 0px 50px 30px 5px rgba(72, 75, 100, 0.2);
+    z-index:1;
+}
+
+.card img {
+    border-radius: 50%;
+    border: 5px solid white;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.data {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.data h1,.amount h3{
+    font-size: 1em;
+    color: var(--very-dark-desaturated-blue);
+    font-weight: 700;
+}
+
+.data h1 {
+    margin-right: 10px;
+}
+
+.card h2 {
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom:24px;
+}
+
+.amount-container{
+    display:flex;
+    align-items: center;
+    width:100%;
+    border-top:0.1px solid #e7e7e7;
+    padding-top:24px;
+    justify-content: space-evenly;
+}
+
+.amount h3{
+    font-size:19px;
+    margin-bottom:2px;
+}
+
+.amount p{
+    font-size:11px;
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-width:375px)  {
+
+    body{
+        background-position-x: -760px;
+        background-position-y:-600px;
+    }
+
+    body::after{
+       background-position-x: 150px;
+       background-size: 150%;	
+    }
+    
+    .card{
+        background-position-x: -12px;
+    }
+
+    .amount-container{
+        padding-right:10px;
+    }
+
+    .attribution{
+        font-size:80%;
+    }
+}
